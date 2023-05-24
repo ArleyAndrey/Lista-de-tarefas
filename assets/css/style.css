@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 0 0 5px gray;
+    border-bottom: solid 1px black;
+    text-decoration: dashed;
+    font-style:oblique ;
+    text-align: center;
+    /*border: solid 1px black;*/
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+h1 img {
+    object-fit:contain;
+    height: 60px;
+    position: relative;
+    top: 10px ;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    margin: auto auto;
+
+}
+
+input {
+    height: 120px;
+    font-size: 2rem;
+    width: 80%;
+    padding-left: 10%;
+
+}
+
+button.add {
+    width: 20%;
+    cursor: pointer;
+    background: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    height: 120px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+button.add:hover {
+  border: solid 1px black;
+  box-shadow: 0 0 15px gray;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    margin: auto auto;
+    /*border: 1px solid blue;*/
+    padding-top: 40px;
+}
+
+.item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background: white;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 0 20px #ccc;
+    margin-bottom: 2%;
+}
+.item:hover{
+    border: solid 1px gray;
+    box-shadow: 0 0 10px gray;
+}
+
+.item-icone {
+    flex: 20%;
+    /*border: 1px solid orangered;*/
+    text-align: center;
+    font-size: 2rem;
+
+
+}
+
+.item-icone i img{
+    border-radius: 50%;
+
+}
+.item-icone i img:hover{
+    border-radius: 50%;
+
+    transition: all 0.15s linear;
+
+    background: #9dd4a7;
+}
+img{
+    height: 20px;
+    object-fit: fill
+}
+.item-nome {
+    flex: 55%;
+    /*border: 1px solid deeppink;*/
+    font-size: 20px;
+    font-weight: bold;
+    object-fit: fill;
+
+}
+
+
+.item-botao {
+    flex: 25%;
+    border: 1px solid green;
+
+}
+.delete{
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+    cursor: pointer;
+}
+.delete:hover{
+    transition: all 0.1s linear;
+    border:solid 1px gray;
+    box-shadow: 0 0 15px gray;
+}
+
+.item.clicado{
+    background: #d4f6d9;
+}
+
+.item.clicado .item-nome{
+    text-decoration: line-through;
+    color: gray;
+}
+
+@media(max-width: 500px){
+    *{
+        font-size: 10px;
+    }
+    h1 img{
+        height: 30px;
+        margin-bottom: 5px;
+    }
+}
