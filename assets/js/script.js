@@ -2,8 +2,12 @@ let input = document.querySelector("#inputTarefa")
 let btnAdd = document.querySelector("#btn-add")
 let main = document.querySelector("#areaLista")
 let btnDel = document.querySelector(".delete")
+/*Variável ao qual é contabiliza quantidade tarefas*/
 let cont = 0
 
+/*Escutador que copia o value do input e cria um item da lista
+  
+*/
 btnAdd.addEventListener("click", function (e) {
     let valorInput = input.value
     if (valorInput !== "" && valorInput !== null && valorInput !== undefined) {
@@ -23,7 +27,7 @@ btnAdd.addEventListener("click", function (e) {
         cont++
     }
 })
-
+/*Escutador ao qual copia o value do input, para evento de teclado*/
 input.addEventListener("keyup", function (e) {
     let valorInput = input.value
     if (e.key == "Enter") {
@@ -43,12 +47,12 @@ input.addEventListener("keyup", function (e) {
         cont++
     }
 })
-
+/*Função que deleta a tarefa a partir do cont/id*/
 function deletar(id) {
     var tarefa = document.getElementById(id)
     tarefa.remove()
 }
-
+/*Função que seleciona a tarefa como concluída*/
 function concluido(id) {
     var tarefa = document.getElementById(id)
     if(tarefa.children[0].children[0].children[0].getAttribute("src") == "assets/img/circle-outline.png" ){
