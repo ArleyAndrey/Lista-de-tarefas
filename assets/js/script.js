@@ -8,7 +8,7 @@ btnAdd.addEventListener("click", function (e) {
     let valorInput = input.value
     if (valorInput !== "" && valorInput !== null && valorInput !== undefined) {
         let novoItem = ` <div  id = "${cont}" class="item">
-        <div class="item-icone">
+        <div class="item-icone" onclick = "concluido(${cont})">
             <i class="mdi mdi-circle-outline"><img src="assets/img/circle-outline.png"></i>
         </div>
         <div class="item-nome"> ${valorInput}
